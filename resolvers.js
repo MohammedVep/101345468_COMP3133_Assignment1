@@ -68,8 +68,9 @@ exports.resolvers = {
                     status: false,
                     "message": "Employee Removed"
                 });
-                return await Employee.findOneAndDelete(args.id)
+               
             }
+            return await Employee.findOneAndDelete({ _id: args.id})
         }
     }
 }

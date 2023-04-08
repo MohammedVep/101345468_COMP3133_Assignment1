@@ -32,7 +32,7 @@ const server  = new ApolloServer({
 //Define Express Server
 const app = express();
 app.use(bodyParser.json());
-app.use('*', cors());
+app.use(cors());
 
 server.start().then(() => {
     server.applyMiddleware({
